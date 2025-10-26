@@ -46,14 +46,14 @@
 // int maximum(int a,int b){
 //     int max;
 //     if (b > a){
-//         printf("Le maximum est : %d\n",b);
 //         max = b;
+//         printf("Le maximum est : %d\n",b);
+//         
 //     } else if (a > b){
 //         printf("Le maximum est : %d\n",a);
 //         max = a;
 //     } else if (a == b){
 //         printf("Le nombre %d et %d sont similaires !\n",a,b);
-//         max = 0;
 //     } else {
 //         printf("Verifier la valeur saisie et reessayer");
 //         max = 0;

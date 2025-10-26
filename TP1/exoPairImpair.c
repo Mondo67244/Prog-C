@@ -1,3 +1,7 @@
+
+
+
+
 // Recursivite indirecte sur calcul de parite
 #include <stdio.h>
 void pair(int a);
