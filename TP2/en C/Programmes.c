@@ -35,21 +35,21 @@
 //     return 0;
 // }
 
-//Programme 3 : // Recursivite directe
-#include <stdio.h>
-int npremiers(int nombre){
-    if (nombre == 0) return 0;
-    int resultat = nombre + npremiers(nombre -1);
-}
-int main(){
-    int nombre;
-    printf("Entrer le nombre : ");
-    scanf("%d",&nombre);
-    printf(" les n premiers sont : %d\n",npremiers(nombre));
-    return 0;
-}
+// //Programme 3 : // Recursivite directe
+// #include <stdio.h>
+// int npremiers(int nombre){
+//     if (nombre == 0) return 0;
+//     int resultat = nombre + npremiers(nombre -1);
+// }
+// int main(){
+//     int nombre;
+//     printf("Entrer le nombre : ");
+//     scanf("%d",&nombre);
+//     printf(" les n premiers sont : %d\n",npremiers(nombre));
+//     return 0;
+// }
 
-//Programmme 4 : Recherche recursive d'un element dans un tableau
+// // Programmme 4 : Recherche recursive d'un element dans un tableau
 // #include <stdio.h>
 // int recherche (int tab[], int taille, int x , int index) {
 //     if (taille >= taille) return 0;
