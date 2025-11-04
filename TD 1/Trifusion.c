@@ -1,4 +1,5 @@
 #include <stdio.h>
+//definition de la fonction
 void Trifusion(int A[], int T[], int gauche, int droite);
 void Fusionner(int A[], int T[], int gauche, int milieu, int droite);
 
@@ -40,7 +41,7 @@ void Fusionner(int A[], int T[], int gauche, int milieu, int droite) {
 
 
 int main() {
-    int N;
+    int N,i;
 
     printf("Entrer la taille du tableau : ");
     scanf("%d", &N);
@@ -54,9 +55,9 @@ int main() {
     int T[N];        
 
     // Saisie
-    for (int i = 0; i < N; i++) {
+    for (i = 0; i < N; i++) {
         printf("Entrez l'element %d : ", i + 1);
-        scanf("%d", &A[i]);
+        scanf("%d\n", &A[i]);
     }
 
     // Tri
@@ -64,7 +65,7 @@ int main() {
 
     // Affichage
     printf("Tableau trie :\n");
-    for (int i = 0; i < N; i++) {
+    for ( i = 0; i < N; i++) {
         printf("%d ", A[i]);
     }
     printf("\n");
