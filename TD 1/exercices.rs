@@ -85,7 +85,7 @@
                                                   Dans une liste chainee, les differents elements ayant la meme valeur de hashage se suivent.
                                                 
 
-                                                0  -> ("h(14)", 0) -> ("h(7)",0) -> NULL
+                                                0  -> ("h(14)", pointeur) -> ("h(7)",pointeur) -> NULL
                                                 1  -> ("h(15)", pointeur) -> ("h(8)",pointeur) -> ("h(22)",pointeur) -> ("h(29)",pointeur) -> NULL
                                                 2  -> NULL
                                                 3  -> NULL
@@ -108,11 +108,11 @@
 
                                                 1 - Construisons un arbre binaire de recherche :
 
-                                                              20 
+                                                            20 
                                                           /     \ 
                                                         10       30
-                                                        /  \     /  \
-                                                      5     15  25   40
+                                                       /  \     /  \
+                                                     5     15  25   40
                                                                     /
                                                                   35
 

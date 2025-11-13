@@ -1,8 +1,13 @@
+
 #include <stdio.h>
-//definition de la fonction
+//Definition des fonctions
 void Trifusion(int A[], int T[], int gauche, int droite);
 void Fusionner(int A[], int T[], int gauche, int milieu, int droite);
 
+
+//Declaration des fonctions
+
+//Fonction trifusion
 void Trifusion(int A[], int T[], int gauche, int droite) {
     if (gauche >= droite) {
         return;
@@ -13,6 +18,8 @@ void Trifusion(int A[], int T[], int gauche, int droite) {
     Trifusion(A, T, milieu + 1, droite);
     Fusionner(A, T, gauche, milieu, droite);
 }
+
+//Fonction fusionner
 void Fusionner(int A[], int T[], int gauche, int milieu, int droite) {
     int i = gauche;
     int j = milieu + 1;
@@ -26,9 +33,11 @@ void Fusionner(int A[], int T[], int gauche, int milieu, int droite) {
             T[k++] = A[j++];
         }
     }
+
     while (i <= milieu) {
         T[k++] = A[i++];
     }
+
     while (j <= droite) {
         T[k++] = A[j++];
     }
@@ -54,7 +63,7 @@ int main() {
     int A[N];        
     int T[N];        
 
-    // Saisie
+    // Saisie 
     for (i = 0; i < N; i++) {
         printf("Entrez l'element %d : ", i + 1);
         scanf("%d\n", &A[i]);
