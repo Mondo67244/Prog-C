@@ -111,4 +111,69 @@ III - Analyse de la complexite temporelle :
                 > Generation de toutes les combinaisons possibles d'un ensemble.
                 > Resolution de certains problemes de satisfaction de contraintes.
                 > Certains algorithmes de cryptographie.
-        
+
+IV - Quelques exemples d'applications :
+
+  Soit l'algorithme suivant : 
+
+  //Algorithme test1
+  Algorithme Test1
+  Var T : tableau [0..N-1] d'entiers
+  i,j,k,val : entier
+  Debut 
+    Ecrire("Remplissage de la liste : ");
+    Pour (i <-- 0 a N-1) faire         | complexite en temps O(N)
+        Lire(T[i]);
+    Finpour
+    i <-- 0 ;
+    Tantque ( i <= N-1 ) faire
+        j <-- i;
+        Pour ( k <-- i+1 a N-1 ) faire
+            si (T[k] < T[j]) alors      | POUR Chaque VALEURS DE I ON FAIT N-I-1 COMPARAISONS
+                j <-- k;
+                val <-- T[j];
+                T[j] <-- T[I];
+                t[I] <-- val;
+            finsi
+        Finpour
+        i <-- i + 1;
+    Fintantque
+  Fin
+
+  TAF : Donnez la complexite en temps et en espace
+
+  Pour cet algorithme on a :
+
+   > COMPLEXITE EN TEMPS = O(N^2);
+   > COMPLEXITE EN ESPACE = O(N);
+
+  Pour chaque iteration de i on fait (N -i -1) comparaisons
+    ** illustration :
+    (N-1) + (N-2) + (N-3) + (N-4) + ... + 1 + 0  === O(N^2)
+ 
+    //Algorithme test 2 
+    Algorithme Test2
+    var T : tableau [0..N-1] d'entiers
+    i,j,val :entiers
+
+    Debut
+        Ecrire("Entrer les elements du tableau : ");
+        Pour (i <-- 0 a N-1) faire          | N-1
+            Lire(T[i]);
+        Finpour
+
+        i <-- N-1;
+
+        Tantque (i > 0) faire
+            Pour (j <-- 1 a i) faire
+                si (T[j] < T[j-1]) alors
+                    val <-- T[j];
+                    T[j] <-- T[j-1];
+                    T[j-1] <-- val;
+                finsi
+            Finpour
+            i <-- i + 1;
+        Fintantque
+    Fin
+
+    EXERCICE - TAF : Evaluer la complexite temporelle et la complexite spatiale
