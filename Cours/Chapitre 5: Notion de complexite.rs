@@ -164,16 +164,15 @@ IV - Quelques exemples d'applications :
 
         i <-- N-1;
 
-        Tantque (i > 0) faire
-            Pour (j <-- 1 a i) faire
-                si (T[j] < T[j-1]) alors
-                    val <-- T[j];
-                    T[j] <-- T[j-1];
-                    T[j-1] <-- val;
-                finsi
-            Finpour
-            i <-- i + 1;
-        Fintantque
+        i <-- N-1;
+Tantque (i > 0) faire
+    Pour (j <-- 1 à i) faire
+        si (T[j] < T[j-1]) alors
+            échanger T[j] et T[j-1]
+        finsi
+    Finpour
+    i <-- i - 1;
+Fintantque
     Fin
 
     EXERCICE - TAF : Evaluer la complexite temporelle et la complexite spatiale
