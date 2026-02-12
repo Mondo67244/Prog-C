@@ -68,10 +68,10 @@
                                                     finProcedure
 
 
-                                On peut avoir les complexite suivantes :
+                                On peut avoir les complexite suivantes pour cet exemple :
 
                                 -> Dans le pire des cas : O(n^2) (quadratique)
-                                -> Dans le meilleur des cas : O(n) ()
+                                -> Dans le meilleur des cas : O(n)
                                 -> Dans le moyen des cas la complexite est de  : O(1) (complexite lineaire)
                                     
                                     2 - Le tri par selection :
@@ -95,7 +95,7 @@
                                 > 4eme selection: -> 101
                                 placement: 20 30 47 63 101 115
 
-                                Remarque : on constate que apres le nieme placement les n plus petits elements de la liste sont a leur place
+                                Remarque : on constate que apres le nieme placement les "n" plus petits elements de la liste sont a leur place
                                 definitive et l'algorithme est le suivant: 
 
                                 DEVOIR : IMPLEMENTER CET Algorithme EN C
@@ -128,7 +128,7 @@
                                 -> Dans le pire des cas , la complexite est de l'ordre de o(n^2)
                                 -> Dans le meilleur des cas , la complexite est de l'ordre de o(n)
 
-                                    3 - Tri par insertion :
+                                    3 - Tri par insertion O(n^2) :
 
                                 Le Principe est le suivant :
                                 chaque element est inserer a sa place correcte parmis les elements deja tries de la liste 
@@ -169,7 +169,7 @@
                                 fin
                                 
 
-                                    4 - Tri fusion (Merge sort):
+                                    4 - Tri fusion (Merge sort) O(n log n):
 
                                 C'est un tri recursif qui repose sur la strategie "diviser pour regner". Le principe est le suivant :
 
@@ -203,11 +203,11 @@
 
                                         5 - 1 - Principe :
                                     
-                                        Il repose sur le principe de Pivot :
+                                        Il repose sur le principe de Pivot (divide le tsbleau en fonction du pivot choisi):
 
                                     -> Choisir un element du tableau (Pivot)
                                     -> Reorganiser le tableau de sorte que tous les elements inferieurs au Pivot soient a Gauche et ceux superieurs soient a droite
-                                    -> Appliqeur Recursivement le tri rapide sur chaque sous - tableaux
+                                    -> Appliquer Recursivement le tri rapide sur chaque sous - tableaux
 
                                         5 - 2 - Avantages et Inconvenients : 
                                     
@@ -220,7 +220,7 @@
                                         ** Inconvenients :
 
                                     -> Il est Non Stable (car les elements egaux peuvent etre Permutes)
-                                    -> La complixite dans le pire des cas peut avoisinner O(n^2) si le Pivot est mal choisi
+                                    -> La complexite dans le pire des cas peut avoisinner O(n^2) si le Pivot est mal choisi
 
                                         5 - 3 - Optimisation :
 

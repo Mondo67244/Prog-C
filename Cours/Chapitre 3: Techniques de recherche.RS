@@ -65,7 +65,8 @@
                                                               a      m      b   b: partie droite
                                                   
                                           La condition sinequanone (ideale) oblige que le tableau sois trie. 
-                                            La complexite est de l'ordre de " O(log2 n) ". le pseudo code est le suivant : 
+                                            La complexite est de l'ordre de " O(log2 n) " mais comme il n'y a pas de complexite 
+                                            O(log2 n) alors la complexite est de O(log n). le pseudo code est le suivant : 
 
                                           * Comme parametre d'entree on a :
                                                   --> Un tableau trie puis la valeur a chercher ( tableau [valeur] )

@@ -50,7 +50,7 @@ int main()
             printf(" Une ou plusieurs autres valeurs du tableau ont le meme hash !\n");
             printf("Cela signifie que %d et d'autres valeurs partagent le meme hash (%d).\n", valeur, verifhash);
 
-            // Optionnel : afficher lesquelles
+         
             printf("Valeurs ayant ce hash : ");
             for (i = 0; i < taille; i++)
             {
