@@ -48,7 +48,7 @@ Avant d'utiliser un fichier on doit au prealable effectuer les opertaions suivan
 --legende : r = read , w = write , a = add ; 
 
     FILE * fichier; //Declaration
-    fichier = fopen("nomfichier.extension", r);//Ouvrir le fichier en precisant le mode , ici ouverture
+    fichier = fopen("nomfichier.extension", "r");//Ouvrir le fichier en precisant le mode , ici ouverture
 
     
     II - Les operations de base sur les fichiers : 
@@ -169,7 +169,6 @@ Plusieurs operations sont essentielles lors de la manipulation des fichiers , et
         Tantque (nonFin(F)) Faire
         Lire(F, X);
         r <-- r + X;
-        FinPour
         Fermer(F);
         //EXO 4 : Copie du contenu d'un fichier dans un autre
         Ouvrir(F, "Lecture");
@@ -190,3 +189,46 @@ Plusieurs operations sont essentielles lors de la manipulation des fichiers , et
         Fintantque
         Fermer(F);
     Fin
+
+    III - Implementation en langage C : 
+
+    Le langage C offre un ensemble de fonctions standards pour manipuler les fichiers dont les
+    principales utilisees sont : 
+
+    - fopen() pour l'ouverture
+    - fclose() pour la fermeture
+    - fread() pour la lecture
+    - fwrite() pour l'ecriture
+    - perror() pour afficher un message d'erreur
+    - fseek() pour deplacer le pointeur du fichier a une position specifiee
+    - ftell() pour retourner la position actuelle du pointeur de fichier
+      
+     1 - La gestion des erreurs :
+     
+    Il est important de controller les erreurs lors de l'ouverture (fopen()) , de la lecture (fread())
+    et de l'ecriture (fwrite()) des fichiers. Cela se fait souvent en verifiant si les pointeurs de
+    fichiers sont a null et la syntaxe est la suivante : 
+
+     if (fichier == NULL) {
+        perror("Erreur lors de l'ouverture du fichier");
+         return 1;
+     }
+
+     2 - Test de la fin du fichier :
+
+    Pour tester si la fin du fichier est atteinte on va utiliser la constante EOF (End Of File). Sa syntaxe est la 
+    suivante : 
+    //fgetch pour lire une chaine de caractere
+     char c 
+     while (c == fgetc(fichier)!=EOF){ //fgetcs permet de recuperer une valeur de type chaine
+        //Traitement a effectuer
+     }
+
+     Exercice 2 : Le programme C suivant cree un fichier examen.txt , puis il ecris quelques lignes de texte
+     Exercice 3 : implementer un programme C qui lit le contenu de Examen.txt et l'affiche dans la console , utiliser
+    fgets et sizeof(?)
+     Exercice 4 : implementer un programme C qui genere une sequence de nombres aleatoires entre 1 et 100
+     , les ecrits dans un fichier nomme "console.txt", puis lis le fichier pour afficher les nombres a l'ecran
+     Exercice 5 : implementer un programme C qui supprime le fichier Examen.txt cree precedemment
+     Exercice 6 : implementer un programme C qui copie le contenu d'un fichier source nomme "source.txt"
+     dans un fichier nomme "destination.txt"
