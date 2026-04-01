@@ -232,3 +232,6 @@ Plusieurs operations sont essentielles lors de la manipulation des fichiers , et
      Exercice 5 : implementer un programme C qui supprime le fichier Examen.txt cree precedemment
      Exercice 6 : implementer un programme C qui copie le contenu d'un fichier source nomme "source.txt"
      dans un fichier nomme "destination.txt"
+
+
+    

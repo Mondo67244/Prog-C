@@ -92,7 +92,50 @@ on doit effectuer de nombreuse suppression et de nombreux ajouts
                 Courant.suivant <--- Nouveau; //Relie le dernier noeud au nouveau noeud
                 Finsi
           FinAlgorithme
+
      * Suppression d'un element dans une liste simplement chainee , son principe est :
-     
 
+     Il s'agit de supprimer le premier noeud et le nouveau premier element devient le deuxieme. L'algorithme est le suivant :
+Algorithme SuppressionEnTete(Liste)
+    Si (Liste.tete != NULL) Alors //Si la liste n'est pas vide
+        Temp <--- Liste.tete; //Stocker l'adresse du noeud a supprimer
+        Liste.tete <--- Liste.tete.suivant; //Mettre a jour la tete pour qu'elle pointe vers le second element
+        Liberer(Temp); //Liberer la memoire occupee par le noeud supprime
+    Sinon
+        Afficher("La liste est deja vide, suppression impossible");
+    Finsi
+FinAlgorithme
 
+      * Suppression d'un element donne de la liste :
+      Ici on supprime le noeud qui suit un element donne. L'algorithme est le suivant :
+Algorithme SuppressionApresElement(Noeud)
+  si (Noeud != NULL et Noeud.suivant != NULL) Alors //Si le noeud existe et n'est pas le dernier
+    Temp <--- Noeud.suivant; //Stocker l'adresse du noeud a supprimer
+    Noeud.suivant <--- Noeud.suivant.suivant; //Relier le noeud courant au noeud suivant celui a supprimer
+    Liberer(Temp); //Liberer la memoire occupee par le noeud supprime
+  Sinon
+    Afficher("Suppression impossible : Noeud inexistant ou dernier element");
+  Finsi
+FinAlgorithme
+
+**Suppression en fin de la liste :**
+
+Ici il s'agit de supprimer le noeud, l'algorithme est le suivant :
+
+```C
+Algorithme SupprimerFin(tete)
+   Si (tete = NULL) Alors
+        Afficher("Liste vide");
+   Finsi
+   Si (tete.suivant = NULL) alors
+         liberer(tete)
+         tete <--- NULL;
+```
+   Sinon
+        Courant <--- tete;
+        Tantque (Courant.suivant.suivant != NULL) Faire
+            Courant <--- Courant.suivant;
+        Fintantque
+        Liberer(Courant.suivant);
+        Courant.suivant <--- NULL; //Mettre a jour le nouveau dernier element pour qu'il pointe vers NULL
+   Finsi

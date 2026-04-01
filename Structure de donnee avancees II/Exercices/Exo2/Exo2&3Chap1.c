@@ -30,12 +30,18 @@ int main(){
     //Ecriture de quelque lignes de texte
     for (i = 0; i < n; i++){
         printf("Entrez la phrase %d : ", i +1);
+
+    //fgets prend en parametre le recepteur ,la taille du recepteur , l'entree / source
         fgets(contenu, 100, stdin);/*ecrire dans le tampon contenu en limit 100 et 
     l'imput du clavier*/
-        fprintf(fichier,"%s",contenu);//ecrire dans le 
+
+    //fprintf prend en parametre le destinataire, le type de la source , la source
+        fprintf(fichier,"%s",contenu);//ecrire dans le contenu dans le fichier
     }
+
     printf("le fichier a ete cree avec success\n");
     fclose(fichier); //Fermeture du fichier
+
     //Exo 3: Lecture du contenu du fichier et affichage a l'ecran
     fichier = fopen("Examen.txt", "r");
     if (fichier == NULL){
@@ -50,4 +56,5 @@ int main(){
     //Exo 5: supprimer le fichier examen.t
     remove("Examen.txt");
     return 0;
+
 }
