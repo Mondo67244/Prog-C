@@ -9,7 +9,7 @@ L'un des rôles essentiels d'un fichier c'est d'assurer la persistance des donn�
 > "Les fichiers constituent donc un mécanisme fondamental de stockage permanent."
 
 Comme exemple on a : 
-- Les documents Textes enregistrés
+- Les documents textes enregistrés
 - Une image sauvegardée
 - Une base de donnée
 
@@ -30,7 +30,7 @@ Un fichier possède donc généralement les éléments suivants :
 En programmation, la déclaration d'un fichier consiste à créer une nouvelle variable qui va permettre de manipuler ce fichier (lecture, écriture, modification).
 On déclare une variable de type fichier via la syntaxe suivante :
 
-```text
+```java
 TypeFichier nomFichier
 ```
 
@@ -56,7 +56,7 @@ Plusieurs opérations sont essentielles lors de la manipulation des fichiers, et
 ### 1 - La déclaration d'un fichier
 Elle permet de définir une variable de type fichier, la syntaxe est la suivante :
 
-```text
+```java
 // En algorithmique
 Déclarer F:fichier
 ```
@@ -64,7 +64,7 @@ Déclarer F:fichier
 ### 2 - L'ouverture d'un fichier
 ⚠️ On doit toujours ouvrir un fichier avant toute manipulation. La primitive utilisée est `Ouvrir` (`fopen` en C). On va distinguer trois modes d'ouverture :
 
-```text
+```java
 // En algorithmique
 // Ouverture en Lecture : 
 Ouvrir(F, "Lecture");
@@ -79,7 +79,7 @@ Ouvrir(F, "Ajout");
 ### 3 - Lecture dans un fichier
 Elle permet de récupérer les données stockées dans un fichier pour des fins utiles. La primitive est `Lire` (`fread` en C). On va distinguer deux variantes :
 
-```text
+```java
 // Lecture d'un element : 
 Lire(F, variable);
 
@@ -93,7 +93,7 @@ Fintantque
 ### 4 - Écriture dans un fichier
 Elle permet d'enregistrer les données dans le fichier, la primitive est `Ecrire` (`fwrite` en C), la syntaxe est : 
 
-```text
+```java
 // En algorithmique
 Ecrire(F, donnee); // ex: Ecrire(F, "Bonjour");
 ```
@@ -101,14 +101,14 @@ Ecrire(F, donnee); // ex: Ecrire(F, "Bonjour");
 ### 5 - Ajout dans un fichier
 Cette opération est similaire à celle de l'écriture mais elle s'effectue sans effacer le contenu existant. La syntaxe est : 
 
-```text
+```java
 Ecrire(F, "Ajout")
 ```
 
 ### 6 - Fermeture d'un fichier
 Cette opération est très cruciale car elle permet de libérer les ressources et d'assurer une sauvegarde correcte des données (`fclose` en C). La syntaxe est : 
 
-```text
+```java
 Fermer(F);
 ```
 
@@ -116,7 +116,7 @@ Fermer(F);
 
 **Exemple :** Écrire un algorithme permettant d'écrire des nombres dans un fichier puis de les lire :
 
-```text
+```java
 Algorithme manipulationFichier
     Declarer F:fichier
     Declarer X:entier   
@@ -147,7 +147,7 @@ Fin
 
 #### Solution Commune
 
-```text
+```java
 Algorithme exercicesFichiers
     Declarer F, C, R: fichier
     Declarer X, i, r, val, compt: entier
@@ -241,7 +241,7 @@ while (fgets(ligne, sizeof(ligne), fichier) != NULL) {
 ```
 
 ### Exercices d'implémentation en C
-- **Exercice 2 :** Le programme C suivant crée un fichier `examen.txt`, puis il écrit quelques lignes de texte.
+- **Exercice 2 :** Le programme C suivant crée un fichier `examen.txt`, puis il écrit quelques lignes de javae.
 - **Exercice 3 :** Implémenter un programme C qui lit le contenu de `examen.txt` et l'affiche dans la console, utiliser `fgets` et déterminer la taille.
 - **Exercice 4 :** Implémenter un programme C qui génère une séquence de nombres aléatoires entre 1 et 100, les écrit dans un fichier nommé `console.txt`, puis lit le fichier pour afficher les nombres à l'écran.
 - **Exercice 5 :** Implémenter un programme C qui supprime le fichier `examen.txt` créé précédemment.

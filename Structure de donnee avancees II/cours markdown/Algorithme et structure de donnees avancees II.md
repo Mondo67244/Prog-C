@@ -49,7 +49,7 @@ Une liste doublement chaînée est repérée par les pointeurs `tête` et `queue
 #### b) Les opérations de parcours
 
 - **Parcours vers l'avant :** Il s'agit de parcourir la liste de la `tête` vers la `queue`.
-```text
+```java
 Algorithme ParcoursAvant(tete)
     Courant <--- tete;
     Tantque (courant != NULL) faire
@@ -60,7 +60,7 @@ FinAlgorithme
 ```
 
 - **Parcours vers l'arrière :** Il s'agit de parcourir la liste de la `queue` vers la `tête`.
-```text
+```java
 Algorithme ParcoursArriere(Queue)
     Courant <--- Queue;
     Tantque(courant != NULL) faire
@@ -78,7 +78,7 @@ FinAlgorithme
 #### d) Les opérations de suppression
 
 - **Suppression au début :**
-```text
+```java
 Algorithme SupprimerDebut(tete)
     Si (tete = NULL) alors
         Afficher("Erreur");
@@ -93,7 +93,7 @@ FinAlgorithme
 ```
 
 - **Suppression du dernier élément :**
-```text
+```java
 Algorithme SupprimerFin(tete)
     Si (tete = NULL) alors
         Afficher("Erreur");
@@ -116,7 +116,7 @@ FinAlgorithme
 
 #### e) Recherche dans la liste doublement chaînée
 
-```text
+```java
 Algorithme Recherche(tete, valeur)
     Courant <--- tete;
     Tantque (Courant != NULL) faire
@@ -152,7 +152,7 @@ Contrairement aux **listes simplement chaînées**, il n'y a pas de pointeur `NU
 #### b) Opérations fondamentales
 
 - **Insertion dans une liste circulaire vide :**
-```text
+```java
 Procedure InsererVide(tete, val)
     nouveau <---- CreerNoeud(val)
     nouveau.suivant <---- nouveau
@@ -160,7 +160,7 @@ FinProcedure
 ```
 
 - **Insertion en tête :**
-```text
+```java
 Procedure InsererDebut(tete, val)
     nouveau <---- creernoeud(val)
     si tete == NULL alors
@@ -179,7 +179,7 @@ FinProcedure
 ```
 
 - **Insertion en fin :**
-```text
+```java
 Procedure InsererFin(tete, val)
     nouveau <---- creernoeud(val)
     si tete == NULL alors
@@ -197,7 +197,7 @@ FinProcedure
 ```
 
 - **Parcours d'une liste circulaire :**
-```text
+```java
 Procedure parcours(tete)
     si (tete == NULL) alors
         afficher("Liste vide");

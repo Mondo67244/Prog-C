@@ -27,34 +27,34 @@ Les opérations de base susceptibles d'être effectuées sur les **Piles** sont 
 #### 1) Implémentation en pseudo-code
 
 **Structure d'une pile :**
-```text
+```java
 Pile : tableau de taille MAX
 Sommet : entier
 ```
 
 **Initialisation d'une pile :** 
-```text
+```java
 InitialisationPile() {
     sommet <---- -1;
 }
 ```
 
 **Tester si pile vide :**
-```text
+```java
 EstVide() {
     retourner (sommet = -1);
 }
 ```
 
 **Tester si la pile est pleine :**
-```text
+```java
 EstPleine() {
     retourner (sommet = MAX - 1);
 }
 ```
 
 **Fonction Empiler :**
-```text
+```java
 Empiler(x) {
     si (EstPleine()) alors
         afficher("La pile est deja pleine !");
@@ -66,7 +66,7 @@ Empiler(x) {
 ```
 
 **Fonction Dépiler :**
-```text
+```java
 Depiler(x) {
     si (EstVide()) alors
         afficher("La pile est vide !");
@@ -78,7 +78,7 @@ Depiler(x) {
 ```
 
 **Fonction donnant le sommet :**
-```text
+```java
 Sommet(x) {
     si (EstVide()) alors
         afficher("La pile est vide !");
@@ -107,7 +107,7 @@ Voici les primitives communément utilisées pour manipuler les files :
 - `Queue (rear)` : Permet de consulter le dernier élément.
 
 **Structure d'une file :**
-```text
+```java
 Structure file
     file : tableau de taille MAX
     tete : entier
@@ -116,7 +116,7 @@ FinStructure
 ```
 
 **Initialisation d'une file :**
-```text
+```java
 Initialiser() {
     tete <---- 0;
     queue <---- -1;

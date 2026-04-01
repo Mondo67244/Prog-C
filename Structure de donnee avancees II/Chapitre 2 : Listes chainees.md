@@ -42,7 +42,7 @@ Ces différents types peuvent être mixés selon les besoins.
 #### Opérations de base sur une liste simplement chaînée
 
 ##### Structure d'un Noeud
-```text
+```java
 structure Noeud
     valeur
     suivant
@@ -56,7 +56,7 @@ finstructure
 - Etape 3 : Mettre à jour la tête de la liste.
 
 **Algorithme :**
-```text
+```java
 Algorithme InsertionEnTete(Liste, X)
     Nouveau <--- allouer Noeud; // Créer un nouveau noeud en memoire
     Nouveau.valeur <--- X;      // Stocker la valeur X
@@ -73,7 +73,7 @@ FinAlgorithme
   - Sinon : se positionner sur le dernier élément de la liste et ajouter le nouveau noeud à sa suite.
 
 **Algorithme :**
-```text
+```java
 Algorithme InsertionEnFin(Liste, X) 
     Nouveau <--- AllouerNoeud; 
     Nouveau.valeur <--- X; 
@@ -96,7 +96,7 @@ FinAlgorithme
 Il s'agit de supprimer le premier noeud, le nouveau premier élément devient alors le deuxième.
 
 **Algorithme :**
-```text
+```java
 Algorithme SuppressionEnTete(Liste)
     Si (Liste.tete != NULL) Alors 
         Temp <--- Liste.tete; 
@@ -113,7 +113,7 @@ FinAlgorithme
 Ici on supprime le noeud qui suit un élément donné.
 
 **Algorithme :**
-```text
+```java
 Algorithme SuppressionApresElement(Noeud)
     Si (Noeud != NULL et Noeud.suivant != NULL) Alors 
         Temp <--- Noeud.suivant; 
@@ -130,7 +130,7 @@ FinAlgorithme
 Il s'agit de supprimer le dernier noeud.
 
 **Algorithme :**
-```text
+```java
 Algorithme SupprimerFin(tete)
     Si (tete = NULL) Alors
         Afficher("Liste vide");
